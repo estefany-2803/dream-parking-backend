@@ -2,7 +2,7 @@
 var express = require('express');
 const Router = express.Router();
 
-const Usuarios = require('./controllers/Usuarios');
+const Usuarios = require('./controladores/Usuarios');
 
 Router.get('/', (req, res, next) => {
 	res.json({

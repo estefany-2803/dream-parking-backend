@@ -26,20 +26,20 @@ const VARS = {
  *	
  *	@info http://docs.sequelizejs.com/en/latest/docs/getting-started/#setting-up-a-connection
  */
-GLOBAL.DATABASE = new Sequelize(VARS.MYSQL_DB, VARS.MYSQL_USER, VARS.MYSQL_PASS {
+GLOBAL.DATABASE = new Sequelize(VARS.MYSQL_DB, VARS.MYSQL_USER, VARS.MYSQL_PASS, {
 	host: VARS.MYSQL_HOST,
 	dialect: 'mysql'
 })
 
 /**
- *	Parametrizamos el servidor.
+ *	Parametrizamos el servidor web.
  *	Express es una libreria/framework minimalista, que facilita el desarrollo
- *	de aplicaciones basadas en el protocolo HTTP.
+ *	de aplicaciones basadas en el protocolo HTTP y escrito totalmente en javascript.
  *	
  *	@info http://expressjs.com
  */
 const app = express();
-const rutas = require('./routes.js');
+const rutas = require('./rutas.js');
 
 app.use(bodyParser.json());
 app.use(rutas);
